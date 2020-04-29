@@ -1,0 +1,11 @@
+{
+    "developmentServer": "http://192.168.54.167:8080",
+    "workspace": "ws_001_unit_test",
+    
+    "sourceCodeModelLocation": "src/model",
+    "sourceModulePerClass": "false",
+    "sourceInTypeScript": "true",
+    "sourceJavaScriptExtension": "js",
+    "sourceUseRequireJs": "false",
+    "libraryPackageName": "@frusal/library-for-browser"
+}
