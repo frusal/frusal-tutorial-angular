@@ -157,7 +157,29 @@ CONNECTED to workspace 'Unit Test' (ws_001_unit_test) as 'unit.test@fruit-salad.
 
 </details>
 
-## Daily usage
+## Workspace schema
+
+Now, let's create persistent entity classes which is a part of our workspace schema. Usually, you would be doing it through frusal.com web UI, but for simplicity of this tutorial we are going to use a JavaScript to do that for us.
+
+Create __`deploy-my-schema.mjs`__ file with the content you can download from [here](./deploy-my-schema.mjs) and run it:
+
+```text
+node --experimental-json-modules deploy-my-schema.mjs
+```
+
+<details><summary>See the console output</summary>
+
+```text
+Connecting to workspace "ws_001_unit_test"...
+Creating classes at module "My Module"...
+Schema changes deployed.
+```
+
+</details>
+
+*Study this script if you want to manipulate schema objects (create persistent classes and fields) from within your application code.*
+
+## Local declarations
 
 Check the status of the connection and the workspace:
 
@@ -225,55 +247,50 @@ Done
 
 *This could be useful during development. Use ^C to terminate the process.*
 
-## Workspace Schema
+## Create application
 
-Now, let's create persistent entity classes which is a part of our workspace schema. Usually, you would be doing it through frusal.com web UI, but for simplicity of this tutorial we are going to use a JavaScript to do that for us.
+Copy and overwrite the files in your `/src/app` directory with copies downloaded from [here](./src/app).
 
-Create __`deploy-my-schema.js`__ file with the content you can download from [here](./deploy-my-schema.js) and run it:
+<details><summary>See wget command examples</summary>
 
-```text
-node --experimental-json-modules deploy-my-schema.js
-```
-
-<details><summary>See the console output</summary>
-
-```text
-Connecting to workspace "ws_001_unit_test"...
-Creating classes at module "My Module"...
-Schema changes deployed.
+```txt
+cd src/app
+wget https://raw.githubusercontent.com/frusal/frusal-tutorial-angular/master/src/app/app.component.css
+wget https://raw.githubusercontent.com/frusal/frusal-tutorial-angular/master/src/app/app.component.html
+wget https://raw.githubusercontent.com/frusal/frusal-tutorial-angular/master/src/app/app.component.ts
+wget https://raw.githubusercontent.com/frusal/frusal-tutorial-angular/master/src/app/app.module.ts
 ```
 
 </details>
 
-*Study this script if you want to manipulate schema objects (create persistent classes and fields) from within your application code.*
+Have a look at [`src/app/app.component.ts`](./src/app/app.component.ts), which has main logic. Change the login call arguments in it.
 
 ## Running
-
-Create __`index.js`__ file with the content you can download from [here](./index.js).
-
-Change the login call arguments in it.
 
 Now, let's try to run it with the following command:
 
 ```text
-node index.js
+npm start
 ```
 
 <details><summary>See the console output</summary>
 
 ```text
-Login...
-User name: Unit Test
-Workspace: Unit Test
-Module: My Module
-Found the following books already exist: b0k3f0,b0k4f0,b0k5f0,b0k6f0,b0k7f0
-New Book created: Bible
-Done.
+chunk {main} main.js, main.js.map (main) 1.65 MB [initial] [rendered]
+chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 141 kB [initial] [rendered]
+chunk {runtime} runtime.js, runtime.js.map (runtime) 6.15 kB [entry] [rendered]
+chunk {styles} styles.js, styles.js.map (styles) 9.96 kB [initial] [rendered]
+chunk {vendor} vendor.js, vendor.js.map (vendor) 3.02 MB [initial] [rendered]
+Date: 2020-05-01T02:12:57.836Z - Hash: bc1b23cb0f82b002ed69 - Time: 6542ms
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+: Compiled successfully.
 ```
 
 </details>
 
-*We are not going into the details of how to use `session` object, `Stage` and `Transaction`, `Stage::query`, etc. It is out of scope for this tutorial. But you are encouraged to study the code in `index.js` as an example of library usage.*
+Open your browser pointing to the http://localhost:4200/ location.
+
+*We are not going into the details of how to use `session` object, `Stage` and `Transaction`, `Stage::query`, etc. It is out of scope for this tutorial. But you are encouraged to study the code in `src/app/app.component.ts` as an example of library usage.*
 
 [frusal.com]: https://frusal.com
 [Angular]: https://angular.io

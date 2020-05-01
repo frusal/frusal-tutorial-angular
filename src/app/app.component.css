@@ -1,0 +1,51 @@
+.app-center-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 95vh;
+}
+
+h1 {
+  text-shadow: 1px 1px #00000022;
+}
+
+img {
+  filter: drop-shadow(2px 2px 1px #00000080) drop-shadow(-1px -1px 1px #00000044);
+}
+
+textarea {
+  background: #88888822;
+  color: inherit;
+  font: inherit;
+  padding: 10px;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 0 #00000022, 0 3px 10px 0 #00000022;
+}
+
+button {
+  font: inherit;
+  color: #ffffff;
+  cursor: pointer;
+  padding-top: 6px;
+  border: 1px solid #0068b380;
+  border-radius: 5px;
+  background-color: #0068b3;
+  box-shadow: 0 4px 8px 0 #00000022, 0 6px 20px 0 #00000022;
+}
+
+button:disabled {
+  text-shadow: 1px 1px #ffffff30;
+  color: #00000030;
+  background-color: #88888840;
+  border: none;
+  cursor: inherit;
+  box-shadow: none;
+}
+
+button:active {
+  background-color: #0068b380;
+  box-shadow: none;
+}
