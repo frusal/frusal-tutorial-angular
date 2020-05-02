@@ -1,6 +1,8 @@
 {
     "window.title": "🚧${rootName}${separator}${activeEditorShort}",
     "cSpell.words": [
+        "Inversed",
+        "Spec",
         "frusal"
     ]
 }
