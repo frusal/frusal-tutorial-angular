@@ -2,9 +2,9 @@
 
 /* GENERATED STUB, remove this comment and take over development of this code. */
 
-import { session } from '@frusal/library-for-browser';
+import { session, Entity } from '@frusal/library-for-browser';
 
-export class NamedEntity {
+export class NamedEntity extends Entity {
     // nothing yet
 }
 session.factory.registerUserClass(NamedEntity);
@@ -23,6 +23,3 @@ export class OrderLine extends NamedEntity {
     // nothing yet
 }
 session.factory.registerUserClass(OrderLine);
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-

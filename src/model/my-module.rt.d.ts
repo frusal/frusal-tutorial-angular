@@ -8,43 +8,55 @@ declare module './my-module' {
     interface NamedEntity extends Entity {
         /** The entity name. (e.g., Product Name, Order Number, etc) */
         name: string;
+    }
+    // NamedEntity instance metadata
+    interface NamedEntity extends Entity {
         readonly name_val: PrimitiveValue<string>;
     }
+    // NamedEntity class metadata
     namespace NamedEntity {
-        /** ClassSpec ID for 'Named Entity' (b9l32). */
+        /** Named Entity class spec ID (b9l32). */
         const id: string;
         const name_prop: Property;
     }
 
     /** Created and maintained by deploy-my-schema.js */
-    interface Product extends Entity {
+    interface Product extends NamedEntity {
         /** The entity name. (e.g., Product Name, Order Number, etc) */
         name: string;
-        readonly name_val: PrimitiveValue<string>;
         /** The price per unit. */
         price: number;
+    }
+    // Product instance metadata
+    interface Product extends NamedEntity {
+        readonly name_val: PrimitiveValue<string>;
         readonly price_val: PrimitiveValue<number>;
     }
+    // Product class metadata
     namespace Product {
-        /** ClassSpec ID for 'Product' (b9l33). */
+        /** Product class spec ID (b9l33). */
         const id: string;
         const name_prop: Property;
         const price_prop: Property;
     }
 
     /** Created and maintained by deploy-my-schema.js */
-    interface Order extends Entity {
+    interface Order extends NamedEntity {
         /** The entity name. (e.g., Product Name, Order Number, etc) */
         name: string;
-        readonly name_val: PrimitiveValue<string>;
         /** Collection of order lines, which links the products and quantities to this order. */
         orderLines: InversedSet<OrderLine>;
         /** Delivery address for the order. */
         deliveryAddress: string;
+    }
+    // Order instance metadata
+    interface Order extends NamedEntity {
+        readonly name_val: PrimitiveValue<string>;
         readonly deliveryAddress_val: PrimitiveValue<string>;
     }
+    // Order class metadata
     namespace Order {
-        /** ClassSpec ID for 'Order' (b9l34). */
+        /** Order class spec ID (b9l34). */
         const id: string;
         const name_prop: Property;
         const orderLines_prop: Property;
@@ -52,22 +64,26 @@ declare module './my-module' {
     }
 
     /** Created and maintained by deploy-my-schema.js */
-    interface OrderLine extends Entity {
+    interface OrderLine extends NamedEntity {
         /** The entity name. (e.g., Product Name, Order Number, etc) */
         name: string;
-        readonly name_val: PrimitiveValue<string>;
         /** Order this line belongs to. */
         order: Order;
-        readonly order_ref: ReferenceValue<Order>;
         /** Product this line orders with quantity. */
         product: Product;
-        readonly product_ref: ReferenceValue<Product>;
         /** Quantity of product to be delivered. */
         quantity: number;
+    }
+    // OrderLine instance metadata
+    interface OrderLine extends NamedEntity {
+        readonly name_val: PrimitiveValue<string>;
+        readonly order_ref: ReferenceValue<Order>;
+        readonly product_ref: ReferenceValue<Product>;
         readonly quantity_val: PrimitiveValue<number>;
     }
+    // OrderLine class metadata
     namespace OrderLine {
-        /** ClassSpec ID for 'Order Line' (b9l35). */
+        /** Order Line class spec ID (b9l35). */
         const id: string;
         const name_prop: Property;
         const order_prop: Property;
