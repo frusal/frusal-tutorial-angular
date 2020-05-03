@@ -4,7 +4,7 @@
 
 Building an [Angular] application to access [frusal.com] workspace.
 
-There are tutorials for other environments available, see [React Tutorial] and [Node Tutorial].
+There are tutorials for other environments available, see [React Tutorial] and [Node.js Tutorial].
 
 In this tutorial we are going to build a simple Angular application which meant to be running in a Browser. The application would access [frusal.com] workspace, it would create a class (which is like a table in many ways) in the workspace and then write some data to it.
 
@@ -297,6 +297,6 @@ Open your browser pointing to the http://localhost:4200/ location.
 [Node.js]: https://nodejs.org
 [Visual Studio Code]: https://code.visualstudio.com
 [Git]: https://git-scm.com
-[Angular Tutorial]: https://github.com/frusal/frusal-tutorial-angular
-[React Tutorial]: https://github.com/frusal/frusal-tutorial-react
-[Node.js Tutorial]: https://github.com/frusal/frusal-tutorial-node
+[Angular Tutorial]: https://github.com/frusal/frusal-tutorial-angular#readme
+[React Tutorial]: https://github.com/frusal/frusal-tutorial-react#readme
+[Node.js Tutorial]: https://github.com/frusal/frusal-tutorial-node#readme
