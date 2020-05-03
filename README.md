@@ -96,7 +96,7 @@ You can open [Visual Studio Code] IDE with `code .` command and inspect the file
 
 ## Install frusal library
 
-Run the following command to install frusal library dependency, configure `project.json` and create `frusal.json`. It would take you through a series of questions to complete.
+Run [Frusal CLI] command to install frusal library dependency, configure `project.json` and create `frusal.json`. It would take you through a series of questions to complete.
 
 *Note that this wizard is activated if `frusal.json` file does not yet exist.*
 
@@ -161,7 +161,7 @@ CONNECTED to workspace 'Unit Test' (ws_001_unit_test) as 'unit.test@fruit-salad.
 
 Now, let's create persistent entity classes which is a part of our workspace schema. Usually, you would be doing it through frusal.com web UI, but for simplicity of this tutorial we are going to use a JavaScript to do that for us.
 
-Create __`deploy-my-schema.mjs`__ file with the content you can download from [here](./deploy-my-schema.mjs) and run it:
+Copy **[deploy-my-schema.mjs]** file from [this example][Example Schema by Script] and run it:
 
 ```text
 node --experimental-json-modules deploy-my-schema.mjs
@@ -297,6 +297,9 @@ Open your browser pointing to the http://localhost:4200/ location.
 [Node.js]: https://nodejs.org
 [Visual Studio Code]: https://code.visualstudio.com
 [Git]: https://git-scm.com
+[Frusal CLI]: https://github.com/frusal/frusal-cli#readme
 [Angular Tutorial]: https://github.com/frusal/frusal-tutorial-angular#readme
 [React Tutorial]: https://github.com/frusal/frusal-tutorial-react#readme
 [Node.js Tutorial]: https://github.com/frusal/frusal-tutorial-node#readme
+[Example Schema by Script]: https://github.com/frusal/frusal-example-schema-by-javascript#readme
+[deploy-my-schema.mjs]: https://github.com/frusal/frusal-example-schema-by-javascript/blob/master/deploy-my-schema.mjs
