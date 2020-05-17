@@ -1,5 +1,15 @@
 body {
-    font-family: fantasy;
+    font-family: Comic Sans MS, fantasy;
+}
+
+input {
+    font-family: inherit;
+    font-size: 100%;
+}
+
+button {
+    font-family: inherit;
+    font-size: 80%;
 }
 
 @media (prefers-color-scheme: dark) {
