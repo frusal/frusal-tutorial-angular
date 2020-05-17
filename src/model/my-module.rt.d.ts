@@ -1,6 +1,6 @@
 /* GENERATED FILE - DO NOT EDIT */
 
-import { Entity, Property, PrimitiveValue, ReferenceValue, InversedSet } from '@frusal/library-for-browser';
+import { Stage, Entity, ClassSpec, Property, PrimitiveValue, ReferenceValue, InversedSet } from '@frusal/library-for-browser';
 
 declare module './my-module' {
 
@@ -15,8 +15,9 @@ declare module './my-module' {
     }
     // NamedEntity class metadata
     namespace NamedEntity {
-        /** Named Entity class spec ID (b9l32). */
+        /** Named Entity class spec ID (b0o8l2). */
         const id: string;
+        function classSpec(stage: Stage): ClassSpec;
         const name_prop: Property;
     }
 
@@ -34,8 +35,9 @@ declare module './my-module' {
     }
     // Product class metadata
     namespace Product {
-        /** Product class spec ID (b9l33). */
+        /** Product class spec ID (b0o8l3). */
         const id: string;
+        function classSpec(stage: Stage): ClassSpec;
         const name_prop: Property;
         const price_prop: Property;
     }
@@ -56,8 +58,9 @@ declare module './my-module' {
     }
     // Order class metadata
     namespace Order {
-        /** Order class spec ID (b9l34). */
+        /** Order class spec ID (b0o8l4). */
         const id: string;
+        function classSpec(stage: Stage): ClassSpec;
         const name_prop: Property;
         const orderLines_prop: Property;
         const deliveryAddress_prop: Property;
@@ -83,8 +86,9 @@ declare module './my-module' {
     }
     // OrderLine class metadata
     namespace OrderLine {
-        /** Order Line class spec ID (b9l35). */
+        /** Order Line class spec ID (b0o8l5). */
         const id: string;
+        function classSpec(stage: Stage): ClassSpec;
         const name_prop: Property;
         const order_prop: Property;
         const product_prop: Property;

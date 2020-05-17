@@ -15,14 +15,24 @@ img {
   filter: drop-shadow(2px 2px 1px #00000080) drop-shadow(-1px -1px 1px #00000044);
 }
 
-textarea {
+.just-name {
+  padding: 4px;
+}
+
+input[type=text] {
   background: #88888822;
   color: inherit;
   font: inherit;
-  padding: 10px;
+  padding: 2px 10px 2px 10px;
+  margin: 2px;
   border: 0;
   border-radius: 5px;
   box-shadow: 0 2px 4px 0 #00000022, 0 3px 10px 0 #00000022;
+}
+
+.button-spacer {
+  display: inline-block;
+  width: 1em;
 }
 
 button {
@@ -34,6 +44,15 @@ button {
   border-radius: 5px;
   background-color: #0068b3;
   box-shadow: 0 4px 8px 0 #00000022, 0 6px 20px 0 #00000022;
+}
+
+button.mini {
+  padding: 0;
+  background-color: inherit;
+  border: 0;
+  margin: 4px 8px 0 8px;
+  color: #0092ff;
+  box-shadow: none;
 }
 
 button:disabled {

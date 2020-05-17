@@ -1,13 +1,29 @@
 
-<div *ngIf="entity" class="app-center-screen">
+<div *ngIf="products" class="app-center-screen">
 
   <img class="main-icon" src="favicon.png" />
 
   <h1>Frusal Angular Example</h1>
 
-  <textarea cols="80" rows="4" [(ngModel)]="entity.description"></textarea>
-
+  <div *ngFor="let product of products">
+    <div *ngIf="transaction">
+      <input type="text" [(ngModel)]="product.name"><button (click)="removeProductOnClick(product)" class="mini">remove</button>
+    </div>
+    <div *ngIf="!transaction" class="just-name">
+      {{ product.name }}
+    </div>
+  </div>
+  <div *ngIf="transaction">
+    <button (click)="addProductOnClick()" class="mini">add new product</button>
+  </div>
   <br>
 
-  <button (click)="submitOnClick()" [disabled]="!transaction || transaction.empty">SUBMIT</button>
+  <div>
+    <button (click)="editOnClick()" [disabled]="transaction">EDIT</button>
+    <span class="button-spacer"></span>
+    <button (click)="applyOnClick()" [disabled]="!transaction || transaction.empty">APPLY</button>
+    <span class="button-spacer"></span>
+    <button (click)="cancelOnClick()" [disabled]="!transaction">CANCEL</button>
+  </div>
+
 </div>
