@@ -21,7 +21,7 @@ export class AppComponent implements OnInit, OnDestroy {
       loginId: 'unit.test@fruit-salad.tech',
       password: `Here I've broken it`,
       workspace: 'ws_001_unit_test',
-      advanced: { baseURL: 'http://localhost:8080' }
+      advanced: { baseURL: 'http://192.168.54.167:8080' }
     });
 
     this.stage = await session.createStage(this.owner);
