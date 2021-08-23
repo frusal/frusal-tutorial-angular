@@ -9,19 +9,19 @@ import { Product } from 'src/model/my-module';
 })
 export class AppComponent implements OnInit, OnDestroy {
 
-  products: Product[];
+  products: Product[] = [];
 
-  stage: Stage;
-  transaction: Transaction;
+  stage?: Stage;
+  transaction?: Transaction;
 
   readonly owner = new Owner();
 
   async ngOnInit() {
     await session.login({
-      loginId: 'unit.test@fruit-salad.tech',
+      loginId: 'unit.test@frusal.com',
       password: `Here I've broken it`,
       workspace: 'ws_001_unit_test',
-      advanced: { baseURL: 'http://192.168.54.167:8080' }
+      advanced: { baseURL: 'http://127.0.0.1:8080' } // TODO change it to point to a real URL
     });
 
     this.stage = await session.createStage(this.owner);
@@ -31,7 +31,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   async refresh() {
       // Query all instances of Product
-      this.products = await this.stage.query({ q: Product.id, type: QPType.BY_CLASS_ID }).promiseArray() as Product[];
+      this.products = await this.stage!.query({ q: Product.id, type: QPType.BY_CLASS_ID }).promiseArray() as Product[];
       // Subscribe to each property change with live autoupdates.
       this.products.forEach(product => product.subscribeToChanges(this.owner, { autoupdate: true}));
   }
@@ -46,23 +46,23 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   addProductOnClick() {
-    const newProduct = this.transaction.createEntity(Product);
+    const newProduct = this.transaction!.createEntity(Product);
     newProduct.name = 'New Product';
     this.products.push(newProduct);
   }
 
   editOnClick() {
-    this.transaction = this.stage.beginTransaction();
+    this.transaction = this.stage!.beginTransaction();
   }
 
   applyOnClick() {
-    this.transaction.commit();
-    this.transaction = null;
+    this.transaction!.commit();
+    delete this.transaction;
   }
 
   cancelOnClick() {
-    this.transaction.rollback();
-    this.transaction = null;
+    this.transaction!.rollback();
+    delete this.transaction;
     this.refresh();
   }
 

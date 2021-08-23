@@ -34,60 +34,49 @@ cd frusal-tutorial-angular
 <details><summary>See the console output</summary>
 
 ```txt
-C:\projects>npm install -g @angular/cli
-npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
-C:\Users\alex\AppData\Roaming\npm\ng -> C:\Users\alex\AppData\Roaming\npm\node_modules\@angular\cli\bin\ng
-
-> @angular/cli@9.1.3 postinstall C:\Users\alex\AppData\Roaming\npm\node_modules\@angular\cli
+C:\projects>npm install -g @angular/cli 
+> @angular/cli@12.2.2 postinstall /usr/local/lib/node_modules/@angular/cli
 > node ./bin/postinstall/script.js
 
-? Would you like to share anonymous usage data with the Angular Team at Google under
-Google’s Privacy Policy at https://policies.google.com/privacy? For more details and
-how to change this setting, see http://angular.io/analytics. No
-
-+ @angular/cli@9.1.13
-added 271 packages from 206 contributors in 81.563s
++ @angular/cli@12.2.2
+added 237 packages from 181 contributors in 9.681s
 ```
 
 ```txt
 C:\projects>ng new frusal-tutorial-angular
 ? Would you like to add Angular routing? No
-? Which stylesheet format would you like to use? (Use arrow keys) CSS
+? Which stylesheet format would you like to use? CSS
 > CSS
   SCSS   [ https://sass-lang.com/documentation/syntax#scss ]
   Sass   [ https://sass-lang.com/documentation/syntax#the-indented-syntax ]
   Less   [ http://lesscss.org ]
   Stylus [ http://stylus-lang.com ]
-CREATE frusal-tutorial-angular/angular.json (3702 bytes)
-CREATE frusal-tutorial-angular/package.json (1299 bytes)
-CREATE frusal-tutorial-angular/README.md (1038 bytes)
-CREATE frusal-tutorial-angular/tsconfig.json (489 bytes)
-CREATE frusal-tutorial-angular/tslint.json (3125 bytes)
+CREATE frusal-tutorial-angular/README.md (1067 bytes)
 CREATE frusal-tutorial-angular/.editorconfig (274 bytes)
-CREATE frusal-tutorial-angular/.gitignore (631 bytes)
-CREATE frusal-tutorial-angular/browserslist (429 bytes)
-CREATE frusal-tutorial-angular/karma.conf.js (1035 bytes)
-CREATE frusal-tutorial-angular/tsconfig.app.json (210 bytes)
-CREATE frusal-tutorial-angular/tsconfig.spec.json (270 bytes)
+CREATE frusal-tutorial-angular/.gitignore (604 bytes)
+CREATE frusal-tutorial-angular/angular.json (3141 bytes)
+CREATE frusal-tutorial-angular/package.json (1085 bytes)
+CREATE frusal-tutorial-angular/tsconfig.json (783 bytes)
+CREATE frusal-tutorial-angular/.browserslistrc (703 bytes)
+CREATE frusal-tutorial-angular/karma.conf.js (1440 bytes)
+CREATE frusal-tutorial-angular/tsconfig.app.json (287 bytes)
+CREATE frusal-tutorial-angular/tsconfig.spec.json (333 bytes)
 CREATE frusal-tutorial-angular/src/favicon.ico (948 bytes)
 CREATE frusal-tutorial-angular/src/index.html (307 bytes)
 CREATE frusal-tutorial-angular/src/main.ts (372 bytes)
-CREATE frusal-tutorial-angular/src/polyfills.ts (2835 bytes)
+CREATE frusal-tutorial-angular/src/polyfills.ts (2820 bytes)
 CREATE frusal-tutorial-angular/src/styles.css (80 bytes)
-CREATE frusal-tutorial-angular/src/test.ts (753 bytes)
+CREATE frusal-tutorial-angular/src/test.ts (788 bytes)
 CREATE frusal-tutorial-angular/src/assets/.gitkeep (0 bytes)
 CREATE frusal-tutorial-angular/src/environments/environment.prod.ts (51 bytes)
-CREATE frusal-tutorial-angular/src/environments/environment.ts (662 bytes)
+CREATE frusal-tutorial-angular/src/environments/environment.ts (658 bytes)
 CREATE frusal-tutorial-angular/src/app/app.module.ts (314 bytes)
-CREATE frusal-tutorial-angular/src/app/app.component.html (25725 bytes)
-CREATE frusal-tutorial-angular/src/app/app.component.spec.ts (993 bytes)
-CREATE frusal-tutorial-angular/src/app/app.component.ts (227 bytes)
 CREATE frusal-tutorial-angular/src/app/app.component.css (0 bytes)
-CREATE frusal-tutorial-angular/e2e/protractor.conf.js (808 bytes)
-CREATE frusal-tutorial-angular/e2e/tsconfig.json (214 bytes)
-CREATE frusal-tutorial-angular/e2e/src/app.e2e-spec.ts (656 bytes)
-CREATE frusal-tutorial-angular/e2e/src/app.po.ts (301 bytes)
-√ Packages installed successfully.
+CREATE frusal-tutorial-angular/src/app/app.component.html (24585 bytes)
+CREATE frusal-tutorial-angular/src/app/app.component.spec.ts (1007 bytes)
+CREATE frusal-tutorial-angular/src/app/app.component.ts (227 bytes)
+✔ Packages installed successfully.
+    Directory is already under version control. Skipping initialization of git.
 ```
 
 </details>
